@@ -8,7 +8,6 @@ class Database {
     constructor() {
         this._db = knex({
             client: 'pg',
-            // connection: 'postgres://postgres:afriyan@127.0.0.1:5432/postgres',
             connection: {
                 host: process.env.DB_HOST,
                 database: process.env.DB_NAME,
@@ -16,7 +15,6 @@ class Database {
                 port: Number(process.env.DB_PORT),
                 password: process.env.DB_PASSWORD,
             },
-
             searchPath: ['public'],
         });
     }
