@@ -30,7 +30,7 @@ class Server {
             res,
             code: 404,
             message: 'resource, data or page not found',
-            data: 'not found',
+            data: '404 NOT FOUND',
         });
     }
 
