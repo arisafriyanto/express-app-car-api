@@ -29,7 +29,7 @@ class Server {
         return ResponseBuilder.response({
             res,
             code: 404,
-            message: 'resource, data or page not found, go go go',
+            message: 'resource, data or page not found',
             data: 'not found',
         });
     }

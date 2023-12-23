@@ -1,19 +1,19 @@
 steps:
     # Build the container image
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['build', '-t', 'gcr.io/$PROJECT_ID/car-api', '.']
+      args: ['build', '-t', 'gcr.io/$PROJECT_ID/app-car-api', '.']
     # Push the container image to Container Registry
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['push', 'gcr.io/$PROJECT_ID/car-api']
+      args: ['push', 'gcr.io/$PROJECT_ID/app-car-api']
     # Deploy container image to Cloud Run
     - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
       entrypoint: gcloud
       args:
           - 'run'
           - 'deploy'
-          - 'car-api'
+          - 'app-car-api'
           - '--image'
-          - 'gcr.io/$PROJECT_ID/car-api'
+          - 'gcr.io/$PROJECT_ID/app-car-api'
           - '--region'
           - 'us-central1'
           - '--platform'
@@ -22,4 +22,4 @@ steps:
           - '--port'
           - '8000'
 images:
-    - 'gcr.io/$PROJECT_ID/car-api'
+    - 'gcr.io/$PROJECT_ID/app-car-api'
