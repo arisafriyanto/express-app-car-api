@@ -4,7 +4,13 @@ The Car Management Dashboard API is a powerful interface specifically designed t
 
 This API offers a comprehensive set of functions, which make it possible to perform tasks such as adding new cars into the system, updating the details of existing vehicles, tracking rental history, managing availability status, and creating insightful reports. The API is designed to simplify the workflow for both administrators and users, providing a seamless experience in handling diverse car rental data.
 
+### Local
 > Base url of this service is: http://localhost:8000
+
+### URL Service
+
+> <p>Backend: https://app-car-api-xkq7x2rzoa-uc.a.run.app</p>
+> <p>Frontend: https://react-app-car-client.vercel.app</p>
 
 ## Getting Started
 
