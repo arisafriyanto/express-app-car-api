@@ -53,7 +53,7 @@ class ServiceAuth implements IServiceAuth {
         return token;
     }
     encryptPassword(password: string): string {
-        return bcrypt.hashSync(password, genSaltSync(5));
+        return bcrypt.hashSync(password, 10);
     }
     validateToken(token: string) {
         const decoded = jwt.verify(`${token}`, JWT_KEY) as IUsers;
